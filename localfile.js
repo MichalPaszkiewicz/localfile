@@ -1,9 +1,9 @@
-angular.module('localfile', [])
-  .controller('localFileController', ['$scope', function($scope) {
-    $scope.files = [];
+//angular.module('localfile', [])
+  //.controller('localFileController', ['$scope', function($scope) {
+    //$scope.files = [];
     
-    for(var i = 0; i < localStorage.length; i++){ 
-      $scope.files.push(localStorage.key(i))
-    }
+    //for(var i = 0; i < localStorage.length; i++){ 
+    //  $scope.files.push(localStorage.key(i))
+    //}
 
-  }]);
+  //}]);
