@@ -34,12 +34,10 @@
     <div class="panel-box">
 
      <div ng-controller="localFileController">
-      <ul class="unstyled">
-        <li ng-repeat="file in files">
-          <input type="checkbox" ng-model="file">
+      <div class="fileHolder" ng-repeat="file in files">
+          <img src="http://vle.kingsmead.org/resource.aspx?id=11769"></img>
           <span>{{file}}</span>
-        </li>
-      </ul>
+      </div>
       </div>
 
       
