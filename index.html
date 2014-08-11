@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-app>
+<html>
 
 <head>
 <title>LocalFile</title>
@@ -31,7 +31,7 @@
   </div>
 
   <div id="panel2" class="panel">
-    <div class="panel-box">
+    <div class="panel-box" ng-app>
       
       <div ng-controller="fileCtrl">
         <div ng-repeat="(k,v) in files">
