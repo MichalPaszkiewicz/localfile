@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-app>
+<html>
 
 <head>
 <title>LocalFile</title>
@@ -32,13 +32,9 @@
 
   <div id="panel2" class="panel">
     <div class="panel-box">
-    
-          <input type="text" ng-model="yourName" placeholder="Enter a name here">
-      <hr>
-      <h1>Hello {{yourName}}!</h1>
       
-      <div>
-        <div ng-repeat="x in blah track by $index">
+      <div ng-app ng-controller="fileCtrl">
+        <div ng-repeat="file in files">
           <span>{{x}} </span>
         </div>
       </div>
