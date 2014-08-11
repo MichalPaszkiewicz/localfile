@@ -1,5 +1,5 @@
   
-var f = {};
+var f = {"one":"two"};
 
 for(i = 0; i < localStorage.length; i++)
 {
@@ -7,8 +7,6 @@ for(i = 0; i < localStorage.length; i++)
 }
   
 function fileCtrl($scope) {
-
  $scope.files = f;
- 
- }
+}
 
