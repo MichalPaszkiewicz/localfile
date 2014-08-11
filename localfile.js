@@ -13,7 +13,7 @@
   
 function fileCtrl($scope) {
 
- $scope.files = ['one', 'two', 'three' ];
+ $scope.files = {'one', 'two', 'three'};
  
  }
 
