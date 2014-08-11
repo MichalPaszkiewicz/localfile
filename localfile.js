@@ -15,6 +15,5 @@ function fileCtrl($scope) {
 
  $scope.files = getFiles();
  
- 
- }}
+ }
 
