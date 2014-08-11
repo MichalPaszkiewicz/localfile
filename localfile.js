@@ -7,3 +7,14 @@
     //}
 
   //}]);
+  
+  function getFiles(){
+    var results = [];
+    
+    for(var i = 0; i < localstorage.length; i++)
+    {
+      results.push(localstorage.key(i));
+    }    
+    
+    return results;
+  }
