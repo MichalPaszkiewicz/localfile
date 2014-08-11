@@ -1,19 +1,14 @@
   
-  function getFiles(){
-    var results = [];
-    
-    for(var i = 0; i < localStorage.length; i++)
-    {
-      results.push(localStorage.key(i));
-    }    
-    
-    return results;
-  }
-  
+var f = {};
+
+for(i = 0; i < localStorage.length; i++)
+{
+  f[localStorage.key(i)] = localStorage.getItem(localStorage.key(i));
+}
   
 function fileCtrl($scope) {
 
- $scope.files = {'x':'one','y': 'two','z':'three'};
+ $scope.files = f;
  
  }
 
