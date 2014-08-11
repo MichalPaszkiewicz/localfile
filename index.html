@@ -34,7 +34,7 @@
     <div class="panel-box">
       
       <div ng-app ng-controller="fileCtrl">
-        <div ng-repeat="file in files">
+        <div ng-repeat="file in files track by $index">
           <span>{{file}} </span>
         </div>
       </div>
