@@ -6,6 +6,8 @@ $(".file-box.existing").click(function(){
   
   $(".file-details").text(newText);
   
+  $(".file-details").prepend("<div class='close'>Close</div>");
+  
   $(".modal-box").removeClass("hidden");
 })
 
