@@ -4,7 +4,7 @@ $(".file-box.existing").click(function(){
   
   var newText = localStorage.getItem($(this).children("span").text().replace(" ",""));
   
-  $(".file-details").text(newText);
+  $(".file-details").html(newText);
   
   $(".file-details").prepend("<div class='close'>Close</div>");
   
@@ -13,7 +13,7 @@ $(".file-box.existing").click(function(){
 
 $(".add-file").click(function(){
   
-    $(".file-details").text("");
+    $(".file-details").html("");
   
     $(".file-details").prepend("<div class='close'>Close</div>");
   
