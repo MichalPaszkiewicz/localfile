@@ -212,3 +212,14 @@ span.item{
   border-radius: 10px;
   color: white;
 }
+
+.delete{
+  vertical-align: bottom;
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  padding: 5px 10px;
+  background: red;
+  color: white;
+  border-radius: 10px;
+}
