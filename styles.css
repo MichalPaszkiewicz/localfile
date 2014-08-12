@@ -163,7 +163,6 @@ span.item{
 }
 
 .file-content{
-  border: 1px black solid;
   padding: 5px; 
 }
 
@@ -197,6 +196,8 @@ span.item{
 
 .file-content-container{
   overflow: auto;
+  max-height: 330px;
+  border: black solid 1px;
 }
 
 .close{
