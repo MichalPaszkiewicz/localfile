@@ -189,3 +189,9 @@ span.item{
   padding: 50px;
   box-shadow: black 0 0 10px 3px;
 }
+
+.close{
+  position: relative;
+  top: -35px;
+  float: right;
+}
