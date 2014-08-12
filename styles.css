@@ -165,12 +165,12 @@ span.item{
 .file-box{
   display: inline-block;
   margin:30px;
+  cursor: pointer;
 }
 
 .file-box span{
   display: block;
   text-align: center;
-  cursor: pointer;
 }
 
 .file-details{
