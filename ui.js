@@ -2,7 +2,7 @@ $(function() {
 
 $(".file-box.existing").click(function(){ 
   
-  var titleText = $(this).children("span").text().replace(" ","");
+  var titleText = $(this).children("span").text().trim();
   var newText = localStorage.getItem(titleText);
   
   $(".file-name").html(titleText);
