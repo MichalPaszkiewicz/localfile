@@ -7,13 +7,15 @@ $(".file-box.existing").click(function(){
   
   $(".file-name").html(titleText);
   $(".file-content").html(newText);
+  $('.file-name').attr('contenteditable','false');
 
   $(".modal-box").removeClass("hidden");
 });
 
 $(".add-file").click(function(){
   
-    $(".file-name").html("");
+    $(".file-name").html("Untitled");
+    $('.file-name').attr('contenteditable','true');
     $(".file-content").html("");
 
   $(".modal-box").removeClass("hidden");
