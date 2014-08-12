@@ -1,4 +1,4 @@
- var f = {"one":"two"};
+ var f = {};
  
 for(i = 0; i < localStorage.length; i++)
 {
