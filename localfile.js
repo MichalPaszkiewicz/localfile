@@ -9,6 +9,10 @@ for(i = 0; i < localStorage.length; i++)
          $scope.files = f;
     }); 
 
-
+$(".file-content").keyup(function(){
+ 
+ localStorage.setItem($(".file-name").text(),$(".file-content").text());
+ 
+});
 
 
