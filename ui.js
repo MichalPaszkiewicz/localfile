@@ -28,9 +28,7 @@ $('.modal-box').on('click', '.close', function() {
 $(".file-content").keyup(function(){
  
  localStorage.setItem($(".file-name").text(),$(".file-content").text());
- console.log($(".file-name").text());
- console.log($(".file-content").text());
- 
+
 });
 
 });
