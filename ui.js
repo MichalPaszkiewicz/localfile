@@ -1,5 +1,12 @@
 $(function() {
 
-$(".file-box").click(function(){  $(this).children(".modal-box").toggleClass("hidden");})
+$(".file-box").click(function(){ 
+  
+  var newText = localStorage.getItem($(this).children("span").text());
+  
+  $(".file-details").text(newText);
+  
+  $(".modal-box").removeClass("hidden");
+})
 
 });
