@@ -11,4 +11,8 @@ $(".file-box.existing").click(function(){
   $(".modal-box").removeClass("hidden");
 })
 
+$('.modal-box').on('click', '.close', function() {
+  $(".modal-box").addClass("hidden");
+});
+
 });
