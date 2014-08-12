@@ -194,4 +194,5 @@ span.item{
   position: relative;
   top: -35px;
   float: right;
+  cursor: pointer;
 }
