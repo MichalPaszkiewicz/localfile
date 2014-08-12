@@ -24,6 +24,7 @@ $(".add-file").click(function(){
 
 $('.modal-box').on('click', '.close', function() {
   $(".modal-box").addClass("hidden");
+  location.reload();
 });
 
 
