@@ -192,7 +192,12 @@ span.item{
 
 .close{
   position: relative;
-  top: -35px;
+  top: -45px;
   float: right;
   cursor: pointer;
+  right: -45px;
+  padding: 5px 10px;
+  background: black;
+  border-radius: 10px;
+  color: white;
 }
