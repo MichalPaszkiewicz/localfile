@@ -162,6 +162,11 @@ span.item{
   z-index: 5;
 }
 
+.file-content{
+  border: 1px black solid;
+  padding: 5px; 
+}
+
 .file-box{
   display: inline-block;
   margin:30px;
