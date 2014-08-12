@@ -2,21 +2,20 @@ $(function() {
 
 $(".file-box.existing").click(function(){ 
   
-  var newText = localStorage.getItem($(this).children("span").text().replace(" ",""));
+  var titleText = $(this).children("span").text().replace(" ","");
+  var newText = localStorage.getItem(titleText);
   
-  $(".file-details").html(newText);
-  
-  $(".file-details").prepend("<div class='close'>Close</div>");
-  
+  $(".file-name").html(titleText);
+  $(".file-content").html(newText);
+
   $(".modal-box").removeClass("hidden");
 })
 
 $(".add-file").click(function(){
   
-    $(".file-details").html("");
-  
-    $(".file-details").prepend("<div class='close'>Close</div>");
-  
+    $(".file-name").html("");
+    $(".file-content").html("");
+
   $(".modal-box").removeClass("hidden");
   
 })
