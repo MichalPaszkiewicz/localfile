@@ -195,6 +195,10 @@ span.item{
   box-shadow: black 0 0 10px 3px;
 }
 
+.file-content-container{
+  overflow: auto;
+}
+
 .close{
   position: relative;
   top: -5px;
