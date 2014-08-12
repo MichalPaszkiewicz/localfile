@@ -27,6 +27,12 @@ $('.modal-box').on('click', '.close', function() {
   //location.reload();
 });
 
+$('.modal-box').on('click', '.delete', function() {
+  localStorage.removeItem($(".file-name").text());
+  $(".modal-box").addClass("hidden");
+  //location.reload();
+});
+
 
 $(".file-content").keyup(function(){
  
