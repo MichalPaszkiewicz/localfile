@@ -15,7 +15,7 @@ for(i = 0; i < localStorage.length; i++)
 }
  
  angular.module('app', []).controller('fileCtrl', function fileCtrl($scope) {
-         $scope.files = m;
+         $scope.files = f;
     }); 
 
 
