@@ -1,5 +1,4 @@
-  
-var f = {"one":"two"};
+ var f = {"one":"two"};
 
 var m = {
     "India": "2",
@@ -14,8 +13,11 @@ for(i = 0; i < localStorage.length; i++)
 {
   f[localStorage.key(i)] = localStorage.getItem(localStorage.key(i));
 }
-  
-function fileCtrl($scope) {
- $scope.files = m;
-}
+ 
+ angular.module('app', []).controller('fileCtrl', function fileCtrl($scope) {
+         $scope.files = m;
+    }); 
+
+
+
 
