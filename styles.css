@@ -180,8 +180,8 @@ span.item{
   left: 0;
   right: 0;
   bottom: 0;
-  height: 100px;
-  width: 100px;
+  height: 400px;
+  width: 500px;
   z-index: 10;
   background: white;
   border: black solid 5px;
