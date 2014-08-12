@@ -1,6 +1,6 @@
 $(function() {
 
-$(".file-box").click(function(){ 
+$(".file-box.existing").click(function(){ 
   
   var newText = localStorage.getItem($(this).children("span").text().replace(" ",""));
   
