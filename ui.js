@@ -9,7 +9,7 @@ $(".file-box.existing").click(function(){
   $(".file-content").html(newText);
 
   $(".modal-box").removeClass("hidden");
-})
+});
 
 $(".add-file").click(function(){
   
@@ -18,7 +18,7 @@ $(".add-file").click(function(){
 
   $(".modal-box").removeClass("hidden");
   
-})
+});
 
 $('.modal-box').on('click', '.close', function() {
   $(".modal-box").addClass("hidden");
