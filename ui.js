@@ -11,6 +11,14 @@ $(".file-box.existing").click(function(){
   $(".modal-box").removeClass("hidden");
 })
 
+$(".add-file").click(function(){
+  
+    $(".file-details").prepend("<div class='close'>Close</div>");
+  
+  $(".modal-box").removeClass("hidden");
+  
+})
+
 $('.modal-box').on('click', '.close', function() {
   $(".modal-box").addClass("hidden");
 });
