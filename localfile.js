@@ -18,7 +18,7 @@ for(i = 0; i < localStorage.length; i++)
       
       if(fileIndex != -1 )
       {
-        files.push($scope.files.splice(fileIndex, 1)[0]);
+        $scope.files.splice(fileIndex, 1);
       }
       
       localStorage.removeItem(fileName);
