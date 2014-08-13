@@ -18,6 +18,7 @@ for(i = 0; i < localStorage.length; i++)
         var fileName = $(".file-name").text();
         localStorage.setItem(fileName,$(".file-content").text());
        
+        console.log("here!");
         if($.inArray(fileName, $scope.files))
         {
           
