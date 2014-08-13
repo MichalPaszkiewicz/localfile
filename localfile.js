@@ -11,8 +11,17 @@ for(i = 0; i < localStorage.length; i++)
     $scope.add = function(item) {
       $scope.files.push(item);
     };
-    $scope.remove = function(index) {
-      data.push($scope.files.splice(index, 1)[0]);
+    $scope.remove = function() {
+      var fileName = $(".file-name").text();
+      
+      var fileIndex = $.inArray(fileName, $scope.files);
+      
+      if(fileIndex != -1 )
+      {
+        files.push($scope.files.splice(fileIndex, 1)[0]);
+      }
+      
+      localStorage.removeItem(fileName);
     };
     $scope.save = function(){
         var fileName = $(".file-name").text();
