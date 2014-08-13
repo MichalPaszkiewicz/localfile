@@ -1,6 +1,6 @@
 $(function() {
 
-$(".file-box.existing").click(function(){ 
+$(".modal-box").on('click',".file-box.existing", function(){ 
   
   var titleText = $(this).children("span").text().trim();
   var newText = localStorage.getItem(titleText);
