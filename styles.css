@@ -191,7 +191,7 @@ span.item{
   background: white;
   border: black solid 5px;
   border-radius: 10px;
-  padding: 10px 50px;
+  padding: 10px 80px 10px 50px;
   box-shadow: black 0 0 10px 3px;
 }
 
@@ -202,11 +202,11 @@ span.item{
 }
 
 .close{
-  position: relative;
-  top: -5px;
+  position: absolute;
+  top: 5px;
   float: right;
   cursor: pointer;
-  right: -45px;
+  right: 5px;
   padding: 5px 10px;
   background: black;
   border-radius: 10px;
@@ -222,4 +222,5 @@ span.item{
   background: red;
   color: white;
   border-radius: 10px;
+  cursor: pointer;
 }
