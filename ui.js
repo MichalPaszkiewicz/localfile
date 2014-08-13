@@ -22,8 +22,12 @@ $(".add-file").click(function(){
   
 });
 
+function closeModal(){
+    $(".modal-box").addClass("hidden");
+}
+
 $('.modal-box').on('click', '.close', function() {
-  $(".modal-box").addClass("hidden");
+  closeModal();
   //location.reload();
 });
 
