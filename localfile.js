@@ -26,6 +26,8 @@ for(i = 0; i < localStorage.length; i++)
         {
           $scope.add(fileName);
         }
+        
+        closeModal();
     };
  }); 
 
