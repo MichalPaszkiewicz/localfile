@@ -201,26 +201,28 @@ span.item{
   border: black solid 1px;
 }
 
-.close{
-  position: absolute;
-  top: 5px;
-  float: right;
-  cursor: pointer;
-  right: 5px;
-  padding: 5px 10px;
-  background: black;
+.close, .delete, .save{
   border-radius: 10px;
   color: white;
+  cursor: pointer;
+  padding: 5px 10px;
+  position: absolute;
+}
+
+.close{
+  top: 5px;
+  right: 5px;
+  background: black;
 }
 
 .delete{
-  vertical-align: bottom;
-  position: absolute;
   bottom: 190px;
   right: 5px;
-  padding: 5px 10px;
   background: red;
-  color: white;
-  border-radius: 10px;
-  cursor: pointer;
+}
+
+.save{
+  bottom: 5px;
+  right: 5px;
+  background: rgb(63, 194, 58);
 }
