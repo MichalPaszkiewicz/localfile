@@ -22,6 +22,8 @@ for(i = 0; i < localStorage.length; i++)
       }
       
       localStorage.removeItem(fileName);
+      
+      $(".modal-box").addClass("hidden");
     };
     $scope.save = function(){
         var fileName = $(".file-name").text();
