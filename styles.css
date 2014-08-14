@@ -215,14 +215,26 @@ span.item{
   background: black;
 }
 
+.close:hover{
+  background: rgb(99, 99, 99);
+}
+
 .delete{
   bottom: 190px;
   right: 5px;
   background: red;
 }
 
+.delete:hover{
+  background: rgb(230, 0, 0);
+}
+
 .save{
   bottom: 5px;
   right: 5px;
   background: rgb(63, 194, 58);
+}
+
+.save: hover{
+  background: rgb(60, 180, 56);
 }
