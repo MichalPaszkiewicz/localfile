@@ -75,7 +75,7 @@
   <script>
     	console.log("%c" + "A website made by Michal Paszkiewicz", "color: aliceBlue; text-shadow: black 1px 1px 4px; font-size: 40px;")
 
-      $('.file-name').on('click', function () { if($(this).prop("contentEditable")){ document.execCommand('selectAll', false, null);} });
+      $('.file-name').on('click', function () { if($(this).prop("contentEditable") == "true"){ document.execCommand('selectAll', false, null);} });
   </script>
   <script src="ui.js"></script>
 </body>
