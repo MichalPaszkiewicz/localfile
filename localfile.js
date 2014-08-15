@@ -3,13 +3,19 @@
 for(i = 0; i < localStorage.length; i++)
 {
   //f[localStorage.key(i)] = localStorage.getItem(localStorage.key(i));
-  f.push(localStorage.key(i));
+  f.push({ name : localStorage.key(i), pic : getPic(localStorage.key(i)) });
+}
+
+function getPic()
+{
+  
+  
 }
  
  angular.module('app', []).controller('fileCtrl', function fileCtrl($scope) {
     $scope.files = f;
     $scope.add = function(item) {
-      $scope.files.push(item);
+      $scope.files.push(item, getPic(item) );
     };
     $scope.remove = function() {
       var fileName = $(".file-name").text();
