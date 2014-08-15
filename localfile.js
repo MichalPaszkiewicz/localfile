@@ -15,7 +15,7 @@ function getPic()
  angular.module('app', []).controller('fileCtrl', function fileCtrl($scope) {
     $scope.files = f;
     $scope.add = function(item) {
-      $scope.files.push(item, getPic(item) );
+      $scope.files.push({ name: item, pic: getPic(item) });
     };
     $scope.remove = function() {
       var fileName = $(".file-name").text();
