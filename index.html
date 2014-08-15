@@ -47,12 +47,12 @@
     <div class="panel-box">
       
       <div ng-controller="fileCtrl">
-        <div class="file-box existing" ng-repeat="file.name in files">
+        <div class="file-box existing" ng-repeat="file in files">
           <img src="https://lh5.ggpht.com/-4y8XgooGfuM-Z-rYE9xqoalqQGFPlaBlRR8dfUG-aMB3rIMUaEkrX95XOlzLQ0_9FE=w300" style="
     height: 100px;
     width: 100px;
 " />
-          <span>{{file}} </span>
+          <span>{{file.name}} </span>
 
         </div>
         
