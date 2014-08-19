@@ -19,7 +19,11 @@ String.prototype.endsWith = function(suffix) {
     return this.indexOf(suffix, this.length - suffix.length) !== -1;
 };
 
- 
+function validateEmail(email) { 
+    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+} 
+
 for(i = 0; i < localStorage.length; i++)
 {
   //f[localStorage.key(i)] = localStorage.getItem(localStorage.key(i));
@@ -36,7 +40,7 @@ function getPic(item)
     {
       return "http://www.xappsoftware.com/wordpress/wp-content/uploads/2014/07/csharp3.png";
     }
-    else if(item.endsWith(".email"))
+    else if(validateEmail(item))
     {
       return "http://www.gravatar.com/avatar/" + item;
     }
