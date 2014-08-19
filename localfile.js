@@ -36,12 +36,14 @@ function getPic(item)
     {
       return "http://www.xappsoftware.com/wordpress/wp-content/uploads/2014/07/csharp3.png";
     }
+    else if(item.endsWith(".email"))
+    {
+      return "http://www.gravatar.com/avatar/" + item;
+    }
     else
     {
       return "https://lh5.ggpht.com/-4y8XgooGfuM-Z-rYE9xqoalqQGFPlaBlRR8dfUG-aMB3rIMUaEkrX95XOlzLQ0_9FE=w300";
     }
-  
-  
 }
  
  angular.module('app', []).controller('fileCtrl', function fileCtrl($scope) {
