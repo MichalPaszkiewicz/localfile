@@ -8,7 +8,14 @@ for(i = 0; i < localStorage.length; i++)
 
 function getPic(item)
 {
-  if(item)
+    if(item.endsWith(".code"))
+    {
+      return "http://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png";
+    }
+    else
+    {
+      return "https://lh5.ggpht.com/-4y8XgooGfuM-Z-rYE9xqoalqQGFPlaBlRR8dfUG-aMB3rIMUaEkrX95XOlzLQ0_9FE=w300";
+    }
   
   
 }
@@ -63,6 +70,10 @@ Array.prototype.contains = function (key, expectedValue) {
     
     return -1;
 } 
+
+String.prototype.endsWith = function(suffix) {
+    return this.indexOf(suffix, this.length - suffix.length) !== -1;
+};
 
 
 
