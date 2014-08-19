@@ -176,6 +176,8 @@ span.item{
 .file-box span{
   display: block;
   text-align: center;
+  max-width: 110px;
+  word-wrap: break-word;
 }
 
 .file-details{
