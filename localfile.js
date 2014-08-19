@@ -32,6 +32,10 @@ function getPic(item)
     {
       return "http://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png";
     }
+    else if(item.endsWith(".cs"))
+    {
+      return "http://www.xappsoftware.com/wordpress/wp-content/uploads/2014/07/csharp3.png";
+    }
     else
     {
       return "https://lh5.ggpht.com/-4y8XgooGfuM-Z-rYE9xqoalqQGFPlaBlRR8dfUG-aMB3rIMUaEkrX95XOlzLQ0_9FE=w300";
