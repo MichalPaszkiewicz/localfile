@@ -20,7 +20,7 @@ function getPic()
     $scope.remove = function() {
       var fileName = $(".file-name").text();
       
-      var fileIndex = $.inArray(fileName, $scope.files);
+      var fileIndex = $scope.files.contains("name", fileName);
       
       if(fileIndex != -1 )
       {
@@ -35,7 +35,7 @@ function getPic()
         var fileName = $(".file-name").text();
         localStorage.setItem(fileName,$(".file-content").text());
 
-        if($.inArray(fileName, $scope.files) != -1)
+        if($scope.files.contains("name", fileName) != -1)
         {
           
         }
@@ -48,5 +48,19 @@ function getPic()
     };
  }); 
 
+Array.prototype.contains = function (key, expectedValue) {
+    // if the other array is a falsy value, return
+    if (!targetArray || targetArray.length < 1)
+        return -1;
+    
+    for (var i = 0; i < this.length; i++) {
+      if(this[i][key] == expectedValue)
+      {
+        return $.inArray(this[i], this);
+      }
+    }       
+    
+    return -1;
+} 
 
 
