@@ -50,7 +50,7 @@ function getPic()
 
 Array.prototype.contains = function (key, expectedValue) {
     // if the other array is a falsy value, return
-    if (!targetArray || targetArray.length < 1)
+    if (!this || this.length < 1)
         return -1;
     
     for (var i = 0; i < this.length; i++) {
