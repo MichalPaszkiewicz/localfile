@@ -1,5 +1,25 @@
  var f = [];//{};
  
+ Array.prototype.contains = function (key, expectedValue) {
+    // if the other array is a falsy value, return
+    if (!this || this.length < 1)
+        return -1;
+    
+    for (var i = 0; i < this.length; i++) {
+      if(this[i][key] == expectedValue)
+      {
+        return $.inArray(this[i], this);
+      }
+    }       
+    
+    return -1;
+} 
+
+String.prototype.endsWith = function(suffix) {
+    return this.indexOf(suffix, this.length - suffix.length) !== -1;
+};
+
+ 
 for(i = 0; i < localStorage.length; i++)
 {
   //f[localStorage.key(i)] = localStorage.getItem(localStorage.key(i));
@@ -56,24 +76,6 @@ function getPic(item)
     };
  }); 
 
-Array.prototype.contains = function (key, expectedValue) {
-    // if the other array is a falsy value, return
-    if (!this || this.length < 1)
-        return -1;
-    
-    for (var i = 0; i < this.length; i++) {
-      if(this[i][key] == expectedValue)
-      {
-        return $.inArray(this[i], this);
-      }
-    }       
-    
-    return -1;
-} 
-
-String.prototype.endsWith = function(suffix) {
-    return this.indexOf(suffix, this.length - suffix.length) !== -1;
-};
 
 
 
