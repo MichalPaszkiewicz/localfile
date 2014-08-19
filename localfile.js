@@ -6,8 +6,9 @@ for(i = 0; i < localStorage.length; i++)
   f.push({ name : localStorage.key(i), pic : getPic(localStorage.key(i)) });
 }
 
-function getPic()
+function getPic(item)
 {
+  if(item)
   
   
 }
@@ -62,5 +63,6 @@ Array.prototype.contains = function (key, expectedValue) {
     
     return -1;
 } 
+
 
 
