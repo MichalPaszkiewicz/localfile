@@ -238,3 +238,9 @@ span.item{
 .save:hover{
   background: rgb(60, 180, 56);
 }
+
+img[src*="http://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"]
+{
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0px black;
+}
