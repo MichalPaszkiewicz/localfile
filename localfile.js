@@ -28,7 +28,7 @@ for(i = 0; i < localStorage.length; i++)
 
 function getPic(item)
 {
-    if(item.endsWith(".code"))
+    if(item.endsWith(".js"))
     {
       return "http://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png";
     }
