@@ -171,6 +171,7 @@ span.item{
   display: inline-block;
   margin:30px;
   cursor: pointer;
+  vertical-align: top;
 }
 
 .file-box span{
