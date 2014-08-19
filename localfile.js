@@ -42,7 +42,7 @@ function getPic(item)
     }
     else if(validateEmail(item))
     {
-      return "http://www.gravatar.com/avatar/" + CryptoJS.MD5(item);
+      return "http://www.gravatar.com/avatar/" + CryptoJS.MD5(item) + "?d=wavatar";
     }
     else
     {
