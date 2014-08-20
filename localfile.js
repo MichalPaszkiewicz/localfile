@@ -109,7 +109,9 @@ angular.module('app', []).controller('fileCtrl', function fileCtrl($scope, fileF
               };
               reader.readAsText(selected_file);
               
-              setTimeout(this.get_callback.bind(this, files), 0000);
+              $rootScope.$apply();
+              
+              //setTimeout(this.get_callback.bind(this, files), 0000);
             },
             
             get_callback: function() {
