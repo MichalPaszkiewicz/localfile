@@ -4,6 +4,10 @@ body, html{
   width: 100%;
 }
 
+body:hover{
+  background: rgb(210, 241, 255);
+}
+
 a{
   margin-right: 100px;
   display: inline-block;
