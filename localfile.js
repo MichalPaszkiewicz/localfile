@@ -52,7 +52,7 @@ function getPic(item)
     }
 }
  
-angular.module('app', []).controller('fileCtrl', function fileCtrl($scope) {
+angular.module('app', []).controller('fileCtrl', function fileCtrl($scope, fileFact) {
     $scope.files = f;
     $scope.add = function(item) {
       $scope.files.push({ name: item, pic: getPic(item) });
