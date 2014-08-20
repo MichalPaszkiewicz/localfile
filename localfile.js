@@ -76,7 +76,16 @@ function getPic(item)
 
       var reader = new FileReader();
       reader.onload = function(e) {
-        console.log(e.target.result);
+        localStorage.setItem(selected_file.name, e.target.result);
+
+        if($scope.files.contains("name", fileName) != -1)
+        {
+          
+        }
+        else
+        {
+          $scope.add(fileName);
+        }
       };
       reader.readAsText(selected_file);
     }
