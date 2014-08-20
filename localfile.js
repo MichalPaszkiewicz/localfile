@@ -1,6 +1,6 @@
- var f = [];//{};
+  var f = [];//{};
  
- Array.prototype.contains = function (key, expectedValue) {
+  Array.prototype.contains = function (key, expectedValue) {
     // if the other array is a falsy value, return
     if (!this || this.length < 1)
         return -1;
@@ -52,7 +52,7 @@ function getPic(item)
     }
 }
  
- angular.module('app', []).controller('fileCtrl', function fileCtrl($scope) {
+angular.module('app', []).controller('fileCtrl', function fileCtrl($scope) {
     $scope.files = f;
     $scope.add = function(item) {
       $scope.files.push({ name: item, pic: getPic(item) });
@@ -74,11 +74,7 @@ function getPic(item)
     $scope.upload = function(){
       var selected_file = $('#input').get(0).files[0];
 
-      var reader = new FileReader();
-      reader.onload = function(e) {
-        $scope.saveVal(selected_file.name, e.target.result);
-      };
-      reader.readAsText(selected_file);
+      fileFact.set(selected_file);
     }
     $scope.saveVal = function(name, contents)
     {
@@ -101,8 +97,26 @@ function getPic(item)
         
         $(".modal-box").addClass("hidden");
     };
- }); 
+}); 
 
+angular.module('app', []).factory('fileFact', function($rootScope) {
+        return {
+            set: function(selected_file) {
+
+              var reader = new FileReader();
+              reader.onload = function(e) {
+                $scope.saveVal(selected_file.name, e.target.result);
+              };
+              reader.readAsText(selected_file);
+              
+              setTimeout(this.get_callback()), 0000);
+            },
+            
+            get_callback: function() {
+                $rootScope.$apply();
+            }
+        }
+});
 
 
 
