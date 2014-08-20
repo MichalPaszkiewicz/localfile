@@ -109,7 +109,7 @@ angular.module('app', []).factory('fileFact', function($rootScope) {
               };
               reader.readAsText(selected_file);
               
-              setTimeout(this.get_callback.bind(this, files)), 0000);
+              setTimeout(this.get_callback.bind(this, files), 0000);
             },
             
             get_callback: function() {
