@@ -15,6 +15,8 @@
     return -1;
 } 
 
+
+
 String.prototype.endsWith = function(suffix) {
     return this.indexOf(suffix, this.length - suffix.length) !== -1;
 };
@@ -69,6 +71,13 @@ function getPic(item)
       
       $(".modal-box").addClass("hidden");
     };
+    $scope.upload = function(){
+      var selected_file = fileDrop.files[0];
+      
+      var reader = new FileReader();
+      reader.readAsText(selected_file);
+      console.log(reader.result);
+    }
     $scope.save = function(){
         var fileName = $(".file-name").text();
         localStorage.setItem(fileName,$(".file-content").text());
