@@ -84,7 +84,7 @@ function getPic(item)
         }
         else
         {
-          $scope.add(fileName);
+          $scope.add(selected_file.name);
         }
       };
       reader.readAsText(selected_file);
