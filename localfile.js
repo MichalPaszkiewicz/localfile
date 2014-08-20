@@ -76,7 +76,7 @@ angular.module('app', []).controller('fileCtrl', function fileCtrl($scope, fileF
 
       var reader = new FileReader();
       reader.onload = function(e) {
-        $rootScope.saveVal(selected_file.name, e.target.result);
+        $scope.saveVal(selected_file.name, e.target.result);
       };
       reader.readAsText(selected_file);
       
