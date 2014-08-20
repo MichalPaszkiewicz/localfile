@@ -97,9 +97,9 @@ angular.module('app', []).controller('fileCtrl', function fileCtrl($scope) {
         
         $(".modal-box").addClass("hidden");
     };
-}); 
+})
 
-angular.module('app', []).factory('fileFact', function($rootScope) {
+    .factory('fileFact', function($rootScope) {
         return {
             set: function(selected_file) {
 
