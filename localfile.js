@@ -78,7 +78,7 @@ function getPic(item)
       reader.onload = function(e) {
         localStorage.setItem(selected_file.name, e.target.result);
 
-        if($scope.files.contains("name", fileName) != -1)
+        if($scope.files.contains("name", selected_file.name) != -1)
         {
           
         }
