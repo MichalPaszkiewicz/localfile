@@ -74,7 +74,13 @@ angular.module('app', []).controller('fileCtrl', function fileCtrl($scope, fileF
     $scope.upload = function(){
       var selected_file = $('#input').get(0).files[0];
 
-      fileFact.set(selected_file);
+      var reader = new FileReader();
+      reader.onload = function(e) {
+        $rootScope.saveVal(selected_file.name, e.target.result);
+      };
+      reader.readAsText(selected_file);
+      
+      //fileFact.set(selected_file);
     }
     $scope.saveVal = function(name, contents)
     {
