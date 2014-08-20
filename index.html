@@ -58,8 +58,10 @@
           <img src="http://etc-mysitemyway.s3.amazonaws.com/icons/legacy-previews/icons/3d-glossy-green-orbs-icons-alphanumeric/103003-3d-glossy-green-orb-icon-alphanumeric-plus-sign.png" style="height: 100px; width: 100px;" />
           <span>Add file...</span>
         </div>
+        
+              <input type="file" id="input" onchange="angular.element(this).scope().upload()"></input>
       </div>
-      <input type="file" id="input" onchange="angular.element(this).$scope.upload()"></input>
+
 
     </div>
   </div>
