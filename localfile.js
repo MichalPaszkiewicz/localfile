@@ -54,11 +54,14 @@ function getPic(item)
  
 angular.module('app', []).controller('fileCtrl', function fileCtrl($scope, fileFact) {
     $scope.files = f;
+    $scope.currentFileName = "Untitled";
     $scope.add = function(item) {
       $scope.files.push({ name: item, pic: getPic(item) });
     };
     $scope.remove = function() {
-      var fileName = $(".file-name").text();
+      //var fileName = $(".file-name").text();
+      
+      var fileName = $scope.currentFileName;
       
       var fileIndex = $scope.files.contains("name", fileName);
       
@@ -96,7 +99,9 @@ angular.module('app', []).controller('fileCtrl', function fileCtrl($scope, fileF
         }
     }
     $scope.save = function(){
-        var fileName = $(".file-name").text();
+        //var fileName = $(".file-name").text();
+        var fileName = $scope.currentFileName;
+        
         var contents = $(".file-content").text();
         
         $scope.saveVal(fileName, contents);
