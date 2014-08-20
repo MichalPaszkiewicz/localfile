@@ -72,8 +72,8 @@ function getPic(item)
       $(".modal-box").addClass("hidden");
     };
     $scope.upload = function(){
-      var selected_file = fileDrop.files[0];
-      
+      var selected_file = $('#input').get(0).files[0];
+
       var reader = new FileReader();
       reader.readAsText(selected_file);
       console.log(reader.result);
