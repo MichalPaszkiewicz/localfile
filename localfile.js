@@ -76,31 +76,28 @@ function getPic(item)
 
       var reader = new FileReader();
       reader.onload = function(e) {
-        localStorage.setItem(selected_file.name, e.target.result);
-
-        if($scope.files.contains("name", selected_file.name) != -1)
-        {
-          
-        }
-        else
-        {
-          $scope.add(selected_file.name);
-        }
+        $scope.saveVal(selected_file.name, e.target.result);
       };
       reader.readAsText(selected_file);
     }
-    $scope.save = function(){
-        var fileName = $(".file-name").text();
-        localStorage.setItem(fileName,$(".file-content").text());
+    $scope.saveVal = function(name, contents)
+    {
+        localStorage.setItem(name, contents);
 
-        if($scope.files.contains("name", fileName) != -1)
+        if($scope.files.contains("name", name) != -1)
         {
           
         }
         else
         {
-          $scope.add(fileName);
+          $scope.add(name);
         }
+    }
+    $scope.save = function(){
+        var fileName = $(".file-name").text();
+        var contents = $(".file-content").text();
+        
+        $scope.saveVal(fileName, contents);
         
         $(".modal-box").addClass("hidden");
     };
