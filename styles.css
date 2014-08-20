@@ -52,7 +52,6 @@ h3{
   }
   
   .panel:nth-child(2n){
-    background:white;
     color:black;
     font-family: arial;
   }
