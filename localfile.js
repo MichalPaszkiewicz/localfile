@@ -55,6 +55,7 @@ function getPic(item)
 angular.module('app', []).controller('fileCtrl', function fileCtrl($scope, fileFact) {
     $scope.files = f;
     $scope.currentFileName = "Untitled";
+    $scope.showFileModal = false;
     $scope.currentFileContent = "";
     $scope.open = function(index){
       
@@ -65,7 +66,8 @@ angular.module('app', []).controller('fileCtrl', function fileCtrl($scope, fileF
       $scope.currentFileContent = localStorage.getItem(titleText);
       
       $('.file-name').attr('contenteditable','false');
-      $(".modal-box").removeClass("hidden");
+      
+      $scope.showFileModal = true;
     }
     $scope.close = function(){
       $(".modal-box").addClass("hidden");
@@ -87,7 +89,7 @@ angular.module('app', []).controller('fileCtrl', function fileCtrl($scope, fileF
       
       localStorage.removeItem(fileName);
       
-      $(".modal-box").addClass("hidden");
+      $scope.showFileModal = false;
     };
     $scope.upload = function(){
       var selected_file = $('#input').get(0).files[0];
