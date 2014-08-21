@@ -72,6 +72,14 @@ angular.module('app', []).controller('fileCtrl', function fileCtrl($scope, fileF
     $scope.close = function(){
       $scope.showFileModal = false;
     }
+    $scope.addFile = function(){
+      $scope.currentFileName = "Untitled";
+      $scope.currentFileContent = "";
+      
+    $('.file-name').attr('contenteditable','true');
+      
+      $scope.showFileModal = true;
+    }
     $scope.add = function(item) {
       $scope.files.push({ name: item, pic: getPic(item) });
     };
