@@ -124,10 +124,13 @@ angular.module('app', []).controller('fileCtrl', function fileCtrl($scope, fileF
         }
     }
     $scope.save = function(){
-        //var fileName = currentFileName;
-        var fileName = $scope.currentFileName;
+        var fileName = $(".file-name").text();
+        //var fileName = $scope.currentFileName;
         
-        var contents = $scope.currentFileContent;
+        var contents = $(".file-content").text();
+        //var contents = $scope.currentFileContent;
+        
+        //todo: replace this section with angular.
         
         $scope.saveVal(fileName, contents);
         
