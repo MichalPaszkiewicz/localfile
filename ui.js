@@ -44,10 +44,10 @@ $('.modal-box').on('click', '.close', function() {
 //});
 
 
-$(".file-content").keyup(function(){
+//$(".file-content").keyup(function(){
  
- localStorage.setItem($(".file-name").text(),$(".file-content").text());
+ //localStorage.setItem($(".file-name").text(),$(".file-content").text());
 
-});
+//});
 
 });
