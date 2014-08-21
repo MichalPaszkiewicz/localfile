@@ -55,8 +55,8 @@ function getPic(item)
 angular.module('app', []).controller('fileCtrl', function fileCtrl($scope, fileFact) {
     $scope.files = f;
     $scope.currentFileName = "Untitled";
-    $scope.open = function(file){
-      $scope.currentFileName = file.name;
+    $scope.open = function(index){
+      $scope.currentFileName = $scope.files[index].name;
     }
     $scope.add = function(item) {
       $scope.files.push({ name: item, pic: getPic(item) });
