@@ -57,7 +57,10 @@ angular.module('app', []).controller('fileCtrl', function fileCtrl($scope, fileF
     $scope.currentFileName = "Untitled";
     $scope.currentFileContent = "";
     $scope.open = function(index){
-      $scope.currentFileName = $scope.files[index].name;
+      
+      var titleText = $scope.files[index].name;
+      
+      $scope.currentFileName = titleText;
       
       $scope.currentFileContent = localStorage.getItem(titleText);
       
