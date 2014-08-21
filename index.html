@@ -25,7 +25,7 @@
 </head>
 <body ng-controller="fileCtrl">
 
-          <div class="modal-box hidden">
+          <div class="modal-box" ng-show="showFileModal">
             <div class="file-details">
               <div class="close" ng-click="close()">Close</div>
               <h2 class="file-name" contentEditable="false">{{currentFileName}}</h2>
