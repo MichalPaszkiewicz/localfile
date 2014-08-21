@@ -23,9 +23,9 @@
 
 </script>
 </head>
-<body>
+<body ng-controller="fileCtrl">
 
-          <div class="modal-box hidden" ng-controller="fileCtrl">
+          <div class="modal-box hidden">
             <div class="file-details">
               <div class="close">Close</div>
               <h2 class="file-name" contentEditable="false">{{currentFileName}}</h2>
@@ -47,7 +47,7 @@
   <div id="panel2" class="panel">
     <div class="panel-box">
       
-      <div ng-controller="fileCtrl">
+      <div>
         <div class="file-box existing" ng-repeat="file in files" ng-click="open($index)">
           <img ng-src="{{file.pic}}" style="height: 100px; width: 100px;" />
           <span>{{file.name}} </span>
