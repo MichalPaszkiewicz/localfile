@@ -1,5 +1,6 @@
 $(function() {
 
+/*
 $(".panel-box").on('click',".file-box.existing", function(){ 
   
   var titleText = $(this).children("span").text().trim();
@@ -11,6 +12,7 @@ $(".panel-box").on('click',".file-box.existing", function(){
 
   $(".modal-box").removeClass("hidden");
 });
+*/
 
 $(".add-file").click(function(){
   
