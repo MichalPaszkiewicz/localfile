@@ -59,6 +59,8 @@ angular.module('app', []).controller('fileCtrl', function fileCtrl($scope, fileF
     $scope.open = function(index){
       $scope.currentFileName = $scope.files[index].name;
       
+      $scope.currentFileContent = localStorage.getItem(titleText);
+      
       $('.file-name').attr('contenteditable','false');
       $(".modal-box").removeClass("hidden");
     }
