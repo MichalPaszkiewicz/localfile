@@ -14,6 +14,7 @@ $(".panel-box").on('click',".file-box.existing", function(){
 });
 */
 
+/*
 $(".add-file").click(function(){
   
     $(".file-name").html("Untitled");
@@ -23,6 +24,7 @@ $(".add-file").click(function(){
   $(".modal-box").removeClass("hidden");
   
 });
+*/
 
 /*
 function closeModal(){
