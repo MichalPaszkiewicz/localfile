@@ -70,7 +70,7 @@ angular.module('app', []).controller('fileCtrl', function fileCtrl($scope, fileF
       $scope.showFileModal = true;
     }
     $scope.close = function(){
-      $(".modal-box").addClass("hidden");
+      $scope.showFileModal = false;
     }
     $scope.add = function(item) {
       $scope.files.push({ name: item, pic: getPic(item) });
@@ -123,7 +123,7 @@ angular.module('app', []).controller('fileCtrl', function fileCtrl($scope, fileF
         
         $scope.saveVal(fileName, contents);
         
-        $(".modal-box").addClass("hidden");
+      $scope.showFileModal = false;
     };
 }).
 
