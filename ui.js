@@ -24,6 +24,7 @@ $(".add-file").click(function(){
   
 });
 
+/*
 function closeModal(){
     $(".modal-box").addClass("hidden");
 }
@@ -32,6 +33,7 @@ $('.modal-box').on('click', '.close', function() {
   closeModal();
   //location.reload();
 });
+*/
 
 //$('.modal-box').on('click', '.delete', function() {
 //  localStorage.removeItem($(".file-name").text());
