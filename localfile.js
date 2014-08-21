@@ -62,6 +62,9 @@ angular.module('app', []).controller('fileCtrl', function fileCtrl($scope, fileF
       $('.file-name').attr('contenteditable','false');
       $(".modal-box").removeClass("hidden");
     }
+    $scope.close = function(){
+      $(".modal-box").addClass("hidden");
+    }
     $scope.add = function(item) {
       $scope.files.push({ name: item, pic: getPic(item) });
     };
