@@ -28,7 +28,7 @@
           <div class="modal-box" ng-show="showFileModal">
             <div class="file-details">
               <div class="close" ng-click="close()">Close</div>
-              <h2 class="file-name" contentEditable="false" ng-model="currentFileName"></h2>
+              <h2 class="file-name" contentEditable="false">{{currentFileName}}</h2>
               <div class="file-content-container">
                 <div class="file-content" onclick="contentEditable='true';">{{currentFileContent}}</div>
               </div>
