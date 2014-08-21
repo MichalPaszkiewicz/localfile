@@ -27,10 +27,10 @@
 
           <div class="modal-box hidden">
             <div class="file-details">
-              <div class="close">Close</div>
+              <div class="close" ng-click="close()">Close</div>
               <h2 class="file-name" contentEditable="false">{{currentFileName}}</h2>
               <div class="file-content-container">
-                <div class="file-content" onclick="contentEditable='true';"></div>
+                <div class="file-content" onclick="contentEditable='true';">{{currentFileContent}}</div>
               </div>
               <div class="delete" ng-click="remove()">Delete</div>
               <div class="save" ng-click="save()">Save</div>
