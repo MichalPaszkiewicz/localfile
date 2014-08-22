@@ -52,7 +52,7 @@ function getPic(item)
     }
 }
  
-angular.module('app', []).controller('fileCtrl', function fileCtrl($scope, fileFact) {
+angular.module('app', []).controller('fileCtrl', function fileCtrl($scope) {
     $scope.files = f;
     $scope.currentFileName = "Untitled";
     $scope.showFileModal = false;
@@ -131,6 +131,6 @@ angular.module('app', []).controller('fileCtrl', function fileCtrl($scope, fileF
         
       $scope.showFileModal = false;
     };
-}).
+})
 
 
