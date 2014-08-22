@@ -66,12 +66,12 @@ angular.module('app', []).controller('fileCtrl', function fileCtrl($scope, fileF
 	  var savedText = localStorage.getItem(titleText);
 	  
       $scope.currentFileContent = savedText;
-	  
-	  myCodeMirror.setValue(savedText);
       
       $('.file-name').attr('contenteditable','false');
       
       $scope.showFileModal = true;
+      
+      myCodeMirror.setValue(savedText);
     }
     $scope.close = function(){
       $scope.showFileModal = false;
