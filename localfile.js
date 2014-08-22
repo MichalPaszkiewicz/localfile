@@ -71,6 +71,8 @@ angular.module('app', []).controller('fileCtrl', function fileCtrl($scope, fileF
       
       $scope.showFileModal = true;
       
+      $scope.$apply();
+      
       myCodeMirror.setValue(savedText);
     }
     $scope.close = function(){
