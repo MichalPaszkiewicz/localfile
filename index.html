@@ -37,6 +37,7 @@
               <h2 class="file-name" contentEditable="false">{{currentFileName}}</h2>
               <div class="file-content-container">
                 <div class="file-content" onclick="contentEditable='true';">{{currentFileContent}}</div>
+				<div id="code-container"></div>
               </div>
               <div class="delete" ng-click="remove()">Delete</div>
               <div class="save" ng-click="save()">Save</div>
@@ -82,9 +83,17 @@
   <script>
     	console.log("%c" + "A website made by Michal Paszkiewicz", "color: aliceBlue; text-shadow: black 1px 1px 4px; font-size: 40px;")
 
-      $('.file-name').on('click', function () { if($(this).prop("contentEditable") == "true"){ document.execCommand('selectAll', false, null);} });
-  </script>
-  <script src="ui.js"></script>
+		$('.file-name').on('click', function () { if($(this).prop("contentEditable") == "true"){ document.execCommand('selectAll', false, null);} });
+	    
+		var customCodeNode = document.getElementById("code-container");
+        
+		var myCodeMirror = CodeMirror(customCodeNode, {
+            lineNumbers: true,
+            theme: "ambiance"
+        });
+		
+</script>
+<script src="ui.js"></script>
 </body>
 
 </html>
