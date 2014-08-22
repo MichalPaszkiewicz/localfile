@@ -63,7 +63,11 @@ angular.module('app', []).controller('fileCtrl', function fileCtrl($scope, fileF
       
       $scope.currentFileName = titleText;
       
-      $scope.currentFileContent = localStorage.getItem(titleText);
+	  var savedText = localStorage.getItem(titleText);
+	  
+      $scope.currentFileContent = savedText;
+	  
+	  myCodeMirror.setValue(savedText);
       
       $('.file-name').attr('contenteditable','false');
       
