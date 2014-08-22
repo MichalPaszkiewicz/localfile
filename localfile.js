@@ -56,7 +56,7 @@ angular.module('app', []).controller('fileCtrl', function fileCtrl($scope, fileF
     $scope.files = f;
     $scope.currentFileName = "Untitled";
     $scope.showFileModal = false;
-    $scope.currentFileContent = "";
+    //$scope.currentFileContent = "";
     $scope.open = function(index){
       
       var titleText = $scope.files[index].name;
@@ -65,7 +65,7 @@ angular.module('app', []).controller('fileCtrl', function fileCtrl($scope, fileF
       
 	  var savedText = localStorage.getItem(titleText);
 	  
-      $scope.currentFileContent = savedText;
+      //$scope.currentFileContent = savedText;
       
       $('.file-name').attr('contenteditable','false');
       
@@ -80,11 +80,15 @@ angular.module('app', []).controller('fileCtrl', function fileCtrl($scope, fileF
     }
     $scope.addFile = function(){
       $scope.currentFileName = "Untitled";
-      $scope.currentFileContent = "";
+      //$scope.currentFileContent = "";
       
     $('.file-name').attr('contenteditable','true');
       
       $scope.showFileModal = true;
+      
+      $scope.$apply();
+      
+      myCodeMirror.setValue("");
     }
     $scope.add = function(item) {
       $scope.files.push({ name: item, pic: getPic(item) });
@@ -133,8 +137,10 @@ angular.module('app', []).controller('fileCtrl', function fileCtrl($scope, fileF
         var fileName = $(".file-name").text();
         //var fileName = $scope.currentFileName;
         
-        var contents = $(".file-content").text();
+        //var contents = $(".file-content").text();
         //var contents = $scope.currentFileContent;
+        
+        var contents = myCodeMirror.getValue();
         
         //todo: replace this section with angular.
         
