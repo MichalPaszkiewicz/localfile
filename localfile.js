@@ -56,37 +56,29 @@ angular.module('app', []).controller('fileCtrl', function fileCtrl($scope, fileF
     $scope.files = f;
     $scope.currentFileName = "Untitled";
     $scope.showFileModal = false;
-    //$scope.currentFileContent = "";
     $scope.open = function(index){
       
       var titleText = $scope.files[index].name;
       
-      $scope.currentFileName = titleText;
+      $scope.displayModal(titleText);
       
-	  var savedText = localStorage.getItem(titleText);
-	  
-      //$scope.currentFileContent = savedText;
-      
+	  	var savedText = localStorage.getItem(titleText);
+   
       $('.file-name').attr('contenteditable','false');
-      
-      $scope.showFileModal = true;
-      
-      $scope.$apply();
       
       myCodeMirror.setValue(savedText);
     }
     $scope.close = function(){
       $scope.showFileModal = false;
     }
+    $scope.displayModal = function(titleText){ 
+    	$scope.currentFileName = titleText;
+    	$scope.showFileModal = true; 
+    }
     $scope.addFile = function(){
-      $scope.currentFileName = "Untitled";
-      //$scope.currentFileContent = "";
+      $scope.displayModal("Untitled");
       
-    $('.file-name').attr('contenteditable','true');
-      
-      $scope.showFileModal = true;
-      
-      $scope.$apply();
+    	$('.file-name').attr('contenteditable','true');
       
       myCodeMirror.setValue("");
     }
@@ -95,8 +87,6 @@ angular.module('app', []).controller('fileCtrl', function fileCtrl($scope, fileF
     };
     $scope.remove = function() {
       var fileName = $(".file-name").text();
-      
-      //var fileName = $scope.currentFileName;
       
       var fileIndex = $scope.files.contains("name", fileName);
       
@@ -117,8 +107,7 @@ angular.module('app', []).controller('fileCtrl', function fileCtrl($scope, fileF
         $scope.saveVal(selected_file.name, e.target.result);
       };
       reader.readAsText(selected_file);
-      
-      //fileFact.set(selected_file);
+
     }
     $scope.saveVal = function(name, contents)
     {
@@ -135,41 +124,13 @@ angular.module('app', []).controller('fileCtrl', function fileCtrl($scope, fileF
     }
     $scope.save = function(){
         var fileName = $(".file-name").text();
-        //var fileName = $scope.currentFileName;
-        
-        //var contents = $(".file-content").text();
-        //var contents = $scope.currentFileContent;
-        
+       
         var contents = myCodeMirror.getValue();
-        
-        //todo: replace this section with angular.
         
         $scope.saveVal(fileName, contents);
         
       $scope.showFileModal = false;
     };
 }).
-
-    factory('fileFact', function($rootScope) {
-        return {
-            set: function(selected_file) {
-
-              var reader = new FileReader();
-              reader.onload = function(e) {
-                $rootScope.saveVal(selected_file.name, e.target.result);
-              };
-              reader.readAsText(selected_file);
-              
-              $rootScope.$apply();
-              
-              //setTimeout(this.get_callback.bind(this, files), 0000);
-            },
-            
-            get_callback: function() {
-                $rootScope.$apply();
-            }
-        }
-});
-
 
 
