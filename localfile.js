@@ -108,8 +108,6 @@ angular.module('app', []).controller('fileCtrl', function fileCtrl($scope) {
         $scope.saveVal(selected_file.name, e.target.result);
       };
       reader.readAsText(selected_file);
-      
-      $scope.$apply();
     }
     $scope.saveVal = function(name, contents)
     {
