@@ -245,6 +245,16 @@ span.item{
   background: rgb(60, 180, 56);
 }
 
+.run{
+  background: rgb(89, 122, 255);
+  right: 5px;
+  bottom: 100px;
+}
+
+.run:hover{
+  background: rgb(60, 98, 250);
+}
+
 img[src*="http://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"], img[src*="gravatar"]
 {
   border-radius: 10px;
