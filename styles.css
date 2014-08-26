@@ -207,7 +207,7 @@ span.item{
   border: black solid 1px;
 }
 
-.close, .delete, .save{
+.close, .delete, .save, .run{
   border-radius: 10px;
   color: white;
   cursor: pointer;
