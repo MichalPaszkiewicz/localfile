@@ -218,6 +218,18 @@ span.item{
   position: absolute;
 }
 
+.encode{
+  right: 5px;
+  top: 50px;
+  background: purple;
+}
+
+.decode{
+  right: 5px;
+  top: 60px;
+  background: magenta;
+}
+
 .close{
   top: 5px;
   right: 5px;
