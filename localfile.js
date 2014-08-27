@@ -39,6 +39,10 @@ function getPic(item)
     {
       return "http://www.xappsoftware.com/wordpress/wp-content/uploads/2014/07/csharp3.png";
     }
+    else if(item.endsWith(".secret"))
+    {
+      return "http://rosannatomiuk.com/wp-content/uploads/2014/07/Top-Secret2.jpg";
+    }
     else if(validateEmail(item))
     {
       return "http://www.gravatar.com/avatar/" + CryptoJS.MD5(item) + "?d=wavatar";
