@@ -41,6 +41,8 @@
 		<div id="code-container"></div>
               </div>
               <div class="delete" ng-click="remove()">Delete</div>
+              <div class="encode" onclick='myCodeMirror.setValue(vigenere(myCodeMirror.getValue(),prompt("Set key value"), true));'>Encode</div>
+              <div class="decode" onclick='myCodeMirror.setValue(vigenere(myCodeMirror.getValue(),prompt("Set key value"), false));'>Decode</div>
               <div class="run" onclick="eval(myCodeMirror.getValue());">Run</div>
               <div class="save" ng-click="save()">Save</div>
             </div>
