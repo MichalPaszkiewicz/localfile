@@ -11,11 +11,8 @@
         return $.inArray(this[i], this);
       }
     }       
-    
     return -1;
 } 
-
-
 
 String.prototype.endsWith = function(suffix) {
     return this.indexOf(suffix, this.length - suffix.length) !== -1;
@@ -57,8 +54,8 @@ angular.module('app', []).controller('fileCtrl', function fileCtrl($scope) {
     $scope.currentFileName = "Untitled";
     $scope.showFileModal = false;
     $scope.displayModal = function(titleText){ 
-    	$scope.currentFileName = titleText;
     	$scope.showFileModal = true; 
+    	$scope.currentFileName = titleText;
     	$scope.$apply();
     }
     $scope.open = function(index){
