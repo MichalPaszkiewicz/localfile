@@ -41,7 +41,7 @@ function getPic(item)
     }
     else if(item.endsWith(".secret"))
     {
-      return "http://rosannatomiuk.com/wp-content/uploads/2014/07/Top-Secret2.jpg";
+      return "http://www.dfinews.com/sites/dfinews.com/files/ntru.jpg";
     }
     else if(validateEmail(item))
     {
