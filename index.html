@@ -97,6 +97,16 @@
             lineNumbers: true,
             theme: "ambiance"
         });
+        
+        var encrypt = function(isEncode)
+        {
+        	var key = prompt("Set key value");
+        	
+        	if(key != null)
+        	{
+        		myCodeMirror.setValue(vigenere(myCodeMirror.getValue(), key, isEncode));
+        	}
+        }
 		
 </script>
 <script src="ui.js"></script>
