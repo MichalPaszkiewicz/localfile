@@ -39,7 +39,7 @@ function getPic(item)
     {
       return "http://www.xappsoftware.com/wordpress/wp-content/uploads/2014/07/csharp3.png";
     }
-    else if(item.endsWith(".secret"))
+    else if(item.endsWith(".secret") || item.endsWith(".crypto"))
     {
       return "http://www.dfinews.com/sites/dfinews.com/files/ntru.jpg";
     }
