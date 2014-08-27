@@ -55,7 +55,7 @@ angular.module('app', []).controller('fileCtrl', function fileCtrl($scope) {
     $scope.showFileModal = false;
     $scope.displayModal = function(titleText){ 
     	$scope.showFileModal = true; 
-    	$scope.$apply();
+    	$scope.digest();
     	$scope.currentFileName = titleText;
     }
     $scope.open = function(index){
