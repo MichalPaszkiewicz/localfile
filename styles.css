@@ -224,10 +224,18 @@ span.item{
   background: purple;
 }
 
+.encode:hover{
+  background: rgb(108, 0, 108);
+}
+
 .decode{
   right: 5px;
   top: 95px;
   background: magenta;
+}
+
+.decode:hover{
+  background: rgb(195, 4, 195);
 }
 
 .close{
