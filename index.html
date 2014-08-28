@@ -40,11 +40,11 @@
                 <!--<div class="file-content" onclick="contentEditable='true';">{{currentFileContent}}</div>-->
 		<div id="code-container"></div>
               </div>
-              <div class="delete" ng-click="remove()">Delete</div>
+              <div class="delete" ng-click="remove()" title="Remove this file from your local file folder!">Delete</div>
               <div class="encode" onclick='encrypt(true);' title="This button allows vigenere encryption for your local files">Encode</div>
               <div class="decode" onclick='encrypt(false);' title="Decrypt your vigenere encrypted local files">Decode</div>
               <div class="run" onclick="eval(myCodeMirror.getValue());" title="Be aware bad code in your file may cause your browser to crash. GL">Run</div>
-              <div class="save" ng-click="save()">Save</div>
+              <div class="save" ng-click="save()" title="Save files in your browser local file folder!">Save</div>
             </div>
           </div>
   
