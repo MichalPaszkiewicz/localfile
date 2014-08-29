@@ -60,13 +60,13 @@
       
       <div>
         <div class="file-box existing" ng-repeat="file in files" ng-click="open($index)">
-          <img ng-src="{{file.pic}}" style="height: 100px; width: 100px;" />
+          <img ng-src="{{file.pic}}" alt="Click here to open {{file.name}}" style="height: 100px; width: 100px;" />
           <span>{{file.name}} </span>
 
         </div>
         
         <div class="file-box add-file" ng-click="addFile()" title="Click here to add a new file to your local folder.">
-          <img src="http://etc-mysitemyway.s3.amazonaws.com/icons/legacy-previews/icons/3d-glossy-green-orbs-icons-alphanumeric/103003-3d-glossy-green-orb-icon-alphanumeric-plus-sign.png" style="height: 100px; width: 100px;" />
+          <img alt="Click to add a new file to your local folder." src="http://etc-mysitemyway.s3.amazonaws.com/icons/legacy-previews/icons/3d-glossy-green-orbs-icons-alphanumeric/103003-3d-glossy-green-orb-icon-alphanumeric-plus-sign.png" style="height: 100px; width: 100px;" />
           <span>Add file...</span>
         </div>
         	<div class="file-handler">
